@@ -1,0 +1,7 @@
+module.exports = {
+    FB_PAGE_TOKEN: 'EAAXyhaTZBFqEBACcXLoGpMhK0pBt1pxcl23tt3rvPnyHPZAdLDU7dOhqH6UCNDWHSC0R6cQCm30QY0hQOGQ2yJ9MxBjqtbZBgrnUmsjVKY0IP51R3JLlHOck7WnZB7cTHoW77r2ZBQ3XhIa7uH4Ofkldh6528QVhRJcaLaF59DwZDZD',
+    FB_VERIFY_TOKEN: 'megrimlockROAR',
+    API_AI_CLIENT_ACCESS_TOKEN: '76919fa1f2184bcba1370ed5b6cca048',
+    FB_APP_SECRET: '77ba13a0c7543f17acaead1841181cbd',
+    SERVER_URL: "https://trexercise.herokuapp.com/",
+};

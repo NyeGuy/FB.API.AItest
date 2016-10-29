@@ -1,0 +1,30 @@
+{
+  "name": "fbapiaitest",
+  "version": "1.0.0",
+  "description": "facebook bot with api.ai integration",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NyeGuy/FB.API.AItest.git"
+  },
+  "keywords": [
+    "facebook",
+    "node",
+    "api.ai"
+  ],
+  "author": "nye warburton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NyeGuy/FB.API.AItest/issues"
+  },
+  "homepage": "https://github.com/NyeGuy/FB.API.AItest#readme",
+  "dependencies": {
+    "apiai": "^3.0.2",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.76.0"
+  }
+}
