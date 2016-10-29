@@ -181,6 +181,32 @@ function handleEcho(messageId, appId, metadata) {
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	switch (action) {
+        case "faq-delivery":
+            sendTextMessage(sender, responseText);
+            sendTypingOn(sender);
+            
+            //ask what users wants to do next
+        setTimeout(function(){
+                let buttons = [
+          {
+            type:"web_url",
+            url:"https://petersapparel.parseapp.com",
+            title:"Track my order"
+          },
+         {
+            type:"phone_number",
+            title:"Call Us",
+            payload:"+13108898908"
+          },
+          {
+            type:"postback",
+            title:"Keep on Chatting",
+            payload:"Chat"
+          }
+        ];  
+        sendButtonMessage(sender, "what would you like to do next?", buttons)
+                       }, 3000)
+            break;
         case "job-inquiry":
            let replies = [
                 {
