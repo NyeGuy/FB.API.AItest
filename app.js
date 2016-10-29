@@ -57,7 +57,7 @@ const sessionIds = new Map();
 
 // Index route
 app.get('/', function (req, res) {
-	res.send('Hello world, I am a chat bot')
+	res.send('This is the main page for the Chat Bot.')
 })
 
 // for Facebook verification
@@ -181,8 +181,28 @@ function handleEcho(messageId, appId, metadata) {
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	switch (action) {
-		default:
-			//unhandled action, just send back the text
+        case "job-inquiry":
+           let replies = [
+                {
+                    "content_type":"text",
+                    "title":"Accountant",
+                    "payload":"Accountant"
+                },
+                {
+                    "content_type":"text",
+                    "title":"Sales",
+                    "payload":"Sales"
+                },
+                {
+                    "content_type":"text",
+                    "title":"Not interested",
+                    "payload":"Not interested"
+                }
+            ];
+            sendQuickReply(sender, responseText, replies);
+            break;
+        default:
+            //unhandled action, just send back text.
 			sendTextMessage(sender, responseText);
 	}
 }
