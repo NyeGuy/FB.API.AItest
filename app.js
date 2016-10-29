@@ -791,6 +791,13 @@ function receivedPostback(event) {
 	var payload = event.postback.payload;
 
 	switch (payload) {
+        case 'GET_STARTED':
+            greetUserText(senderID);
+            break;
+        case 'JOB_APPLY':
+            //get feedback with new jobs.
+            sendToApiAi(senderID, "job openings");
+            break;
         case 'Chat':
             //user wants to chat
             sendTextMessage(senderID, "Let's keep chatting.");
